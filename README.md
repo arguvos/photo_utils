@@ -40,3 +40,27 @@ This command will process images located in the ./images/ directory using RGB hi
 ## Notes:
 - Supported image formats: JPEG (.jpg).
 - The program will save the equalized images in the same directory with a prefix 'out_' added to the original file name.
+
+# rename_files.py
+This Python script renames all files in a specified directory according to a given pattern.
+
+## Usage:
+```bash
+python rename_files.py <directory> <pattern>
+```
+Where:
+- <directory>: The path to the directory where file renaming will be performed.
+- <pattern>: The renaming pattern to be applied to the files. The pattern can contain placeholders:
+  - {date}: Current date in the format YYYYMMDD.
+  - {counter}: Counter for appending to file names.
+
+Example:
+```bash
+python rename_files.py /path/to/directory "{date}_{counter}_qwertylab"
+```
+This command will rename all files in the specified directory according to the provided pattern.
+
+## Note:
+- Make sure to enclose the pattern in double quotes.
+- The script preserves the original file extension.
+- If a file with the new name already exists, it will not be renamed.
